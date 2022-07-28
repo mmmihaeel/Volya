@@ -12,21 +12,23 @@
             input {
                 width: 100%;
                 height: 55px;
-                background: rgba(176, 186, 195, 0.2);
+                background: rgb(255, 255, 255);
                 border-radius: 20px;
                 padding: 20px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 20px;
+                @include adaptiv-font(20, 14);
                 line-height: 30px;
-                color: rgba(0, 0, 0, 0.5);
                 border: none;
+                letter-spacing: 0.01em;
+                color: #7DA5C1;
 
+                //сука як я заєбався
                 &:hover,
                 &:focus,
                 &:active {
-                    // border: 2px solid #1AA6AF;
-                    background: rgba(176, 186, 195, 0.6);
+                    background: #E7ECF3;
+                    border: none;
                 }
 
             }
@@ -34,9 +36,9 @@
             label {
                 font-style: normal;
                 font-weight: 600;
-                @include adaptiv-font(20, 10);
+                @include adaptiv-font(20, 14);
                 line-height: 30px;
-                color: #000000;
+                color: #225274;
             }
 
         }
@@ -48,24 +50,65 @@
             &-text {
                 font-style: normal;
                 font-weight: 500;
-                @include adaptiv-font(20, 10);
+                @include adaptiv-font(20, 14);
                 line-height: 30px;
-                color: #000000;
+                color: #ffff;
             }
 
             &-checkbox {
+                position: relative;
+
                 label {
+                    position: absolute;
                     font-style: normal;
                     font-weight: 500;
                     @include adaptiv-font(24, 14);
                     line-height: 30px;
-                    color: #000000;
+                    color: #ffff;
+                    top: 12px;
+                    left: 70px;
+                    transform: translate(-50%, -50%);
                 }
 
                 input {
-                    width: 20px;
-                    height: 20px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    width: 45px;
+                    height: 26px;
+                    cursor: pointer;
+                    border-radius: 30px;
+                    border: 3px solid #b8c9ff;
+                    cursor: pointer;
+                    position: relative;
+                    transition: 0.3s;
+
+                    &:checked {
+                        background: #275efe;
+                        border: 3px solid #275efe;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        background: #bbc1e1;
+                        top: 50%;
+                        left: 2px;
+                        transform: translateY(-50%);
+                        transition: 0.3s;
+                    }
+
+                    &:checked::before {
+                        background: #275efe;
+                        border: none;
+                        left: 21px;
+                        background: white;
+                    }
                 }
+
             }
 
         }
@@ -76,19 +119,37 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            @include button;
 
             &-login {
                 font-style: normal;
                 font-weight: 400;
                 @include adaptiv-font(24, 14);
                 line-height: 36px;
-                color: #000000;
+                color: #fff;
+                margin-top: 10px;
 
                 a {
-                    color: #DCCF04;
+                    color: #225274;
                 }
             }
         }
     }
+
+
+
+    .first {
+        left: 2%;
+        top: 80%;
+    }
+
+    .second {
+        right: -9%;
+        top: 56%;
+    }
+
+    .third {
+        bottom: -15%;
+        right: -8%;
+    }
+
 }

@@ -8,7 +8,6 @@
         margin-top: 15px;
         display: grid;
         grid-template: repeat(3, 1fr) /1fr;
-        gap: 15px;
         padding: 0px 200px;
 
         &-input {
@@ -17,21 +16,23 @@
             input {
                 width: 100%;
                 height: 55px;
-                background: rgba(176, 186, 195, 0.4);
+                background: rgb(255, 255, 255);
                 border-radius: 20px;
                 padding: 20px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 20px;
+                @include adaptiv-font(20, 14);
                 line-height: 30px;
-                color: rgba(0, 0, 0, 0.5);
                 border: none;
+                letter-spacing: 0.01em;
+                color: #7DA5C1;
 
+                //сука як я заєбався
                 &:hover,
                 &:focus,
                 &:active {
-                    // border: 2px solid #1AA6AF;
-                    background: rgba(176, 186, 195, 0.2);
+                    background: #E7ECF3;
+                    border: none;
                 }
 
             }
@@ -39,9 +40,9 @@
             label {
                 font-style: normal;
                 font-weight: 600;
-                @include adaptiv-font(20, 10);
+                @include adaptiv-font(20, 14);
                 line-height: 30px;
-                color: #000000;
+                color: #225274;
             }
 
         }
@@ -80,7 +81,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            @include button;
 
             a {
                 margin-top: 10px;
@@ -88,7 +88,7 @@
                 font-weight: 400;
                 @include adaptiv-font(24, 14);
                 line-height: 36px;
-                color: #1AA6AF;
+                color: #225274;
             }
 
             &-login {
@@ -96,12 +96,31 @@
                 font-weight: 400;
                 @include adaptiv-font(24, 14);
                 line-height: 36px;
-                color: #000000;
+                color: #fff;
+                margin-top: 10px;
 
                 a {
-                    color: #DCCF04;
+                    color: #225274;
                 }
             }
         }
     }
+
+    .first {
+        left: 2%;
+        top: 80%;
+    }
+
+    .second {
+        right: -9%;
+        top: 56%;
+    }
+
+    .third {
+        bottom: -15%;
+        right: -8%;
+    }
+
 }
+
+// я в рот єбав цю верстку блять

@@ -3,19 +3,3 @@
     $maxWidth: $maxWidth - 320;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
-
-
-@mixin button {
-    .button {
-        width: 340px;
-        height: 60px;
-        background: #F9ED32;
-        border-radius: 10px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 38px;
-        color: #000000;
-        border: none;
-    }
-}

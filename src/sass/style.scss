@@ -362,7 +362,6 @@ template {
 }
 
 
-
 .container {
     margin: 0 auto;
     width: 50%;
@@ -372,31 +371,34 @@ template {
 
 .main-form {
     flex: 1 1 auto;
-    padding: 0px 200px;
+    margin-top: 85px;
 }
 
 .title {
     font-style: normal;
     font-weight: 600;
-    @include adaptiv-font(36, 16);
+    @include adaptiv-font(36, 20);
     line-height: 39px;
-    color: #000000;
+    color: #225274;
     text-align: center;
 }
 
 
 .header {
     position: relative;
-    height: 80px;
+    height: 120px;
     width: 100%;
+    background: linear-gradient(157.89deg, #576772 0%, rgba(75, 100, 113, 0) 100.48%);
+    backdrop-filter: blur(100px);
+
 
     &__logo {
         position: absolute;
         display: block;
-        width: 150px;
-        height: 140px;
-        left: 18%;
-        top: 20px;
+        width: 110px;
+        height: 110px;
+        left: 20%;
+        top: 12px;
 
         img {
             width: 100%;
@@ -409,7 +411,7 @@ template {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        width: 27%;
+        width: 40%;
         right: 10%;
         top: 40px;
 
@@ -419,38 +421,78 @@ template {
             font-size: 33px;
             line-height: 39px;
             text-decoration: underline;
-            color: #000000;
+            color: #ffff;
 
             &:hover,
             &:focus,
             &:active {
                 text-decoration: underline;
-                color: #000000;
+                color: #ffff;
             }
         }
     }
 }
 
-
-.footer {
-    position: relative;
-    // height: 90px;
-    width: 100%;
-
-    &__wrapper {
-        padding: 0px 350px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+.button {
+    width: 340px;
+    height: 60px;
+    background: #225274;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    color: #fff;
+    border: none;
 }
+
+// .footer {
+//     position: relative;
+//     // height: 90px;
+//     width: 100%;
+
+//     &__wrapper {
+//         padding: 0px 350px;
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
+//     }
+
+//     &__logo {
+//         img {
+//             width: 100%;
+//             object-fit: cover;
+//         }
+//     }
+// }
 
 .authorization,
 .registration {
+    background: #96ABBA;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
+div.img-pattern {
+    position: absolute;
+    width: 250.21px;
+    height: 250.21px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+//ще йобана адаптація бляьбб
 @import 'blocks/authorisation';
 @import 'blocks/registration';
+@import 'blocks/media'
