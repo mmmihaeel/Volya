@@ -490,6 +490,12 @@ div.img-pattern {
     }
 }
 
+div.alert {
+    text-align: center;
+    color: rgba(232, 11, 44, 0.719);
+    @include adaptiv-font(16, 9);
+    font-weight: 700;
+}
 
 
 //ще йобана адаптація бляьбб
